@@ -4,8 +4,13 @@
 import logging
 from pathlib import Path
 
+# Model Integration
+from pyral.relation import Relation
+
 # Domain Populate
 from dpop.metamodel_db import MetamodelDB
+from dpop.db_names import mmdb
+from dpop.exceptions import *
 
 _logger = logging.getLogger(__name__)
 
@@ -37,12 +42,18 @@ class System:
 
         # Load a metamodel file populated with a system
         MetamodelDB.load(mmdb_path=self.mmdb_path)
-        MetamodelDB.display()
+        # MetamodelDB.display()
 
+        # Set the system name
+        # Get the System name from the populated metamodel
+        result = Relation.restrict(db=mmdb, relation='System')
+        if not result.body:
+            msg = f"System name not found in the populated metamodel db"
+            _logger.exception(msg)
+            raise MMDBDataMissing(msg)
+
+        self.name = result.body[0]['Name']
         pass
-
-        # # Set the system name
-        # cls.system = System(system_dir=cls.system_dir, debug=debug)
         #
         # if debug:
         #     MetamodelDB.print()
