@@ -3,9 +3,9 @@ requires      = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "xuml-populate"
-version = "0.2.0"
-description = "Populates the SM Metamodel schema with a user model and outputs this as a TclRAL *.ral database"
+name = "DomainPopulate"
+version = "0.1.0"
+description = "Creates and populates a TclRAL database for a modeled domain "
 readme = "README.md"
 authors = [{ name = "Leon Starr", email = "leon_starr@modelint.com" }]
 license = { file = "LICENSE" }
@@ -15,7 +15,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 keywords = ["shlaer-mellor", "metamodel", "executable uml", "mbse", "xuml", "xtuml", "platform independent", "sysml"]
-dependencies = ["xcm-parser", "xsm-parser", "op-parser", "mtd-parser", "mi-pyral", "scrall", 'tomli; python_version < "3.11"']
+dependencies = ["mi-pyral", "PyYAML", 'tomli; python_version < "3.13"']
 requires-python = ">=3.11"
 
 [project.optional-dependencies]
@@ -26,5 +26,5 @@ dev = ["bump2version", "pytest"]
 modeldb = "xuml_populate.__main__:main"
 
 [project.urls]
-repository    = "https://github.com/modelint/xuml-populate"
-documentation = "https://github.com/modelint/xuml-populate/wiki"
+repository    = "https://github.com/modelint/DomainPopulate"
+documentation = "https://github.com/modelint/DomainPopulate/wiki"
