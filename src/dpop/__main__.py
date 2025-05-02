@@ -73,7 +73,7 @@ def main():
             logger.info("Copying example directory into user's local directory")
             shutil.copytree(ex_path, local_ex_path)  # Copy the example directory
 
-    if args.examples or args.version:
+    if args.examples:
         # Don't generate any domain dbs
         # Just quit here
         sys.exit(0)
