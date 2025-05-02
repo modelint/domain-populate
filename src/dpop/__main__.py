@@ -43,6 +43,8 @@ def parse(cl_input):
                         help='Output the populated database to standard output')
     parser.add_argument('-D', '--debug', action='store_true',
                         help='Debug mode'),
+    parser.add_argument('-E', '--examples', action='store_true',
+                        help='Create a directory of examples in the current directory')
     parser.add_argument('-L', '--log', action='store_true',
                         help='Generate a diagnostic log file')
     parser.add_argument('-v', '--verbose', action='store_true',
@@ -59,6 +61,22 @@ def main():
 
     # Parse the command line args
     args = parse(sys.argv[1:])
+
+    if args.examples:
+        # Copy the entire example directory into the users local dir if it does not already exist
+        import shutil
+        ex_path = Path(__file__).parent.parent / 'examples'
+        local_ex_path = Path.cwd() / 'examples'
+        if local_ex_path.exists():
+            logger.warning("Examples already exist in the current directory. Delete or move it if you want the latest.")
+        else:
+            logger.info("Copying example directory into user's local directory")
+            shutil.copytree(ex_path, local_ex_path)  # Copy the example directory
+
+    if args.examples or args.version:
+        # Don't generate any domain dbs
+        # Just quit here
+        sys.exit(0)
 
     if args.version:
         # Just print the version and quit
