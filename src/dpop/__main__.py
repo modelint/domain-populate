@@ -37,7 +37,7 @@ def parse(cl_input):
     parser.add_argument('-t', '--types', action='store',
                         help='Name of the *.yaml file that maps domain to TclRAL supported data types')
     parser.add_argument('-o', '--output', action='store_true',
-                        help='Output the populated database to standard output')
+                        help='Output each populated database to standard output as *.txt files, on per domain db')
     parser.add_argument('-D', '--debug', action='store_true',
                         help='Debug mode'),
     parser.add_argument('-E', '--examples', action='store_true',
@@ -45,7 +45,7 @@ def parse(cl_input):
     parser.add_argument('-L', '--log', action='store_true',
                         help='Generate a diagnostic log file')
     parser.add_argument('-v', '--verbose', action='store_true',
-                        help='Verbose messages')
+                        help='Verbose messages -- Tables for both the system database and each domain database will be displayed')
     parser.add_argument('-V', '--version', action='store_true',
                         help='Print the current version')
     return parser.parse_args(cl_input)

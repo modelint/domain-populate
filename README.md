@@ -1,5 +1,13 @@
 # Blueprint Domain Populator
 
+## Instalation
+
+% pip install mi-domain-populate
+
+This creates an executable command named `domaindb`
+
+Type domaindb -help to get the complete list of options.
+
 This package takes three inputs, a populated metamodel database, a context and a yaml file mapping user to system types.
 
 ### Populated metamodel database
