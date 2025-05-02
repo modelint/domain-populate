@@ -1,1 +1,2 @@
-include src/domain_pop/log.conf
+include src/dpop/log.conf
+recursive-include src/examples *
