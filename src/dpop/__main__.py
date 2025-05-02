@@ -14,7 +14,7 @@ import atexit
 from dpop.system import System
 from dpop import version
 
-_logpath = Path("domain_pop.log")
+_logpath = Path("domaindb.log")
 _progname = 'Blueprint Domain Population'
 
 

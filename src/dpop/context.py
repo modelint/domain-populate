@@ -1,7 +1,6 @@
 """ starting_context.py -- Populate the schema """
 
 # System
-from pathlib import Path
 from collections import namedtuple
 import logging
 from typing import TYPE_CHECKING, NamedTuple
@@ -17,11 +16,9 @@ from pyral.transaction import Transaction
 
 # Model Execution
 from dpop.db_names import mmdb
-from dpop.exceptions import *
 
 AttrRef = NamedTuple('AttrRef', from_attr=str, to_attr=str, to_class=str, alias=str)
 MultipleAssignerInitialState = NamedTuple('MultipleAssignerInitialState', pclass=str, state=str)
-# AttrRef = namedtuple('AttrRef', 'from_attr to_attr to_class alias')
 
 _logger = logging.getLogger(__name__)
 
@@ -184,9 +181,6 @@ class Context:
                 table.append(drow)
             self.relations[class_name] = table
         self.insert()
-        # Print out the populated user model
-        print("\nPopulated user model\n-----")
-        Relvar.printall(db=self.domaindb.alias)
 
     def cast_to_dbtype(self, attr_name: str, attr_class: str, value: str) -> int | str | float | bool:
         """

@@ -72,20 +72,12 @@ class DomainModelDB:
         self.system = system
         self.domain = name
         self.alias = alias
-        # self.prefixes = None
         self.ordinal_rnums = None
         self.gen_rnums = None
         self.non_assoc_rnums = None
         self.assoc_rnums = None
         self.user_types = None
         self.context = None
-        # self.context = None
-        # self.lifecycles: dict[str, list[str]] = {}
-        # self.pclasses: dict[str, list[str]] = {}
-        # self.single_assigners = None
-        # self.methods = None
-        # # MultAssignerPartition = NamedTuple('MultAssignerPartion', pclass=str, id_attrs=dict[str, list[str]])
-        # self.mult_assigners: dict[str, MultAssignerPartition] = {}
 
         Database.open_session(name=self.alias)  # User models created in this database
 
