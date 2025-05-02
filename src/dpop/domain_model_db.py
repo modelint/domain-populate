@@ -91,6 +91,7 @@ class DomainModelDB:
             self.display()
         if self.system.output_text:
             self.print()
+        self.save()
 
     def display(self):
         """
@@ -110,7 +111,16 @@ class DomainModelDB:
                 Relvar.printall(db=self.alias)
 
     def populate(self):
+        """
+        Populate the domain database with initial instances using the supplied context.
+        """
         self.context = Context(domaindb=self)
+
+    def save(self):
+        """
+        Save the domain database as an *.ral file in the current working directory.
+        """
+        Database.save(db=self.alias, fname=f"{self.alias}.ral")
 
     def build_gen_rels(self):
         """
