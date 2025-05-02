@@ -96,9 +96,10 @@ class DomainModelDB:
         """
         Display the user domain schema on the console
         """
-        print(f"\nvvv Unpopulated [{self.domain}] Domain Model vvv ")
+        msg = f"Populated {self.domain} domain model"
+        print(f"\n*** {msg} ***")
         Relvar.printall(db=self.alias)
-        print(f"^^^ Unpopulated [{self.domain}] Domain Model ^^^ ")
+        print(f"\n^^^ {msg} ^^^\n")
 
     def print(self):
         """

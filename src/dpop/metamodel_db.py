@@ -40,7 +40,7 @@ class MetamodelDB:
     @classmethod
     def display(cls):
         # Print out the populated metamodel
-        msg = f"Metamodel populated from {cls.filename} "
-        print(f"*** {msg} ***")
+        msg = f"Metamodel populated from {cls.filename}"
+        print(f"\n*** {msg} ***")
         Relvar.printall(db=mmdb)
-        print(f"^^^ {msg} ^^^")
+        print(f"\n^^^ {msg} ^^^\n")
