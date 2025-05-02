@@ -72,7 +72,7 @@ def main():
     # System specified
     if args.system:
         s = System(mmdb_path=Path(args.system), context_path=Path(args.context),
-                   type_mapping=args.types, verbose=args.verbose, output_text=args.output, debug=args.debug)
+                   types_path=Path(args.types), verbose=args.verbose, output_text=args.output, debug=args.debug)
 
     logger.info("No problemo")  # We didn't die on an exception, basically
     if args.verbose:

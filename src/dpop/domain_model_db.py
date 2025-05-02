@@ -6,6 +6,7 @@ import yaml
 from collections import defaultdict
 from typing import TYPE_CHECKING, Any, NamedTuple
 from contextlib import redirect_stdout
+from pathlib import Path
 
 if TYPE_CHECKING:
     from dpop.system import System
@@ -31,10 +32,25 @@ mult_tclral = {
     '1c': Mult.ZERO_OR_ONE
 }
 
-def load_yaml(file_path):
-    with open(file_path, "r") as file:
-        data = yaml.safe_load(file)  # Load YAML content safely
-    return data
+def load_yaml(file_path: Path) -> Any:
+    """
+    Load the specified YAML file and return the loaded data
+    :param file_path:
+    :return: Loaded data (type depends on content of the file)
+    """
+    try:
+        with file_path.open("r") as file:
+            data = yaml.safe_load(file)
+        return data
+    except FileNotFoundError:
+        _logger.error(f"Error: File not found — {file_path}")
+    except PermissionError:
+        _logger.error(f"Error: Permission denied — {file_path}")
+    except yaml.YAMLError as e:
+        _logger.error(f"Error: Invalid YAML format in {file_path}\nDetails: {e}")
+    except Exception as e:
+        _logger.error(f"Unexpected error reading {file_path}: {e}")
+    raise DPOPFileException(f"File [{file_path}] not loaded")
 
 
 MultipleAssigner = NamedTuple("MultipleAssigner", rnum=str, pclass=str)
@@ -60,7 +76,7 @@ class DomainModelDB:
         self.gen_rnums = None
         self.non_assoc_rnums = None
         self.assoc_rnums = None
-        # self.user_types = None
+        self.user_types = None
         # self.context = None
         # self.lifecycles: dict[str, list[str]] = {}
         # self.pclasses: dict[str, list[str]] = {}
@@ -78,9 +94,8 @@ class DomainModelDB:
         self.build_gen_rels()
         if self.system.verbose:
             self.display()
-        if self.system.debug:
+        if self.system.output_text:
             self.print()
-        pass
 
     def display(self):
         """
@@ -228,20 +243,7 @@ class DomainModelDB:
         """
         Create class relvars
         """
-        # Load the user to system db_types.yaml file
-
-        # Create a list of prefixes to identify the file for this domain
-        # It's either going to have a name or alias prefix without any spaces in it
-        # There shouldn't be any spaces in an alias name, but we'll check just in case
-        self.prefixes = [self.domain.lower().replace(' ', '_'), self.alias.lower().replace(' ', '_')]
-        db_dir = self.system.system_dir / types_dir_name
-        found_files = [file for file in db_dir.iterdir() if file.is_file() and
-                       any(file.name.lower().startswith(prefix) for prefix in self.prefixes)]
-        if len(found_files) == 0:
-            raise MXFileException(f"No db_types file found for domain [{self.domain}] in: {db_dir.resolve()}")
-        if len(found_files) > 1:
-            raise MXFileException(f"Multiple db_types files for domain [{self.domain}] in: {db_dir.resolve()}")
-        self.user_types = load_yaml(found_files[0])
+        self.user_types = load_yaml(self.system.types_path)
 
         R = f"Domain:<{self.domain}>"
         Relation.restrict(db=mmdb, relation='Class', restriction=R, svar_name='classes')

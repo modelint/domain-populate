@@ -25,7 +25,7 @@ class System:
     for each domain populated into a metamodel database.
     """
 
-    def __init__(self, mmdb_path: Path, context_path: Path, type_mapping: Path, output_text: bool,
+    def __init__(self, mmdb_path: Path, context_path: Path, types_path: Path, output_text: bool,
                  verbose: bool, debug: bool = False):
         """
         Create a domain database for each domain in the populated metamodel and then populate each of these
@@ -41,6 +41,7 @@ class System:
         self.mmdb_path = mmdb_path
         self.context_path = context_path
         self.output_text = output_text
+        self.types_path = types_path
         self.verbose = verbose
         self.debug = debug
 
