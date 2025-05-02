@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mi-domain-populate"
-version = "0.1.3"
+version = "0.1.4"
 description = "Creates and populates a TclRAL database for a modeled domain "
 readme = "README.md"
 authors = [{ name = "Leon Starr", email = "leon_starr@modelint.com" }]
