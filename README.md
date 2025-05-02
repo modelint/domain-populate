@@ -60,6 +60,6 @@ Write the scenario instance population `*.sip` file yourself using the example `
 
 ### Type Mapping
 
-A yaml file that maps each domain type to a TclRAL system type.
+A `*.yaml` file that maps each domain type to a TclRAL system type. There's one in the supplied example to use as a guide.
 
 
