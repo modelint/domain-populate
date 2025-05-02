@@ -110,7 +110,6 @@ class DomainModelDB:
 
     def populate(self):
         self.context = Context(domaindb=self)
-        self.print()
 
     def build_gen_rels(self):
         """

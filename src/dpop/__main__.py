@@ -17,18 +17,15 @@ from dpop import version
 _logpath = Path("domaindb.log")
 _progname = 'Blueprint Domain Population'
 
-
 def clean_up():
     """Normal and exception exit activities"""
     _logpath.unlink(missing_ok=True)
-
 
 def get_logger():
     """Initiate the logger"""
     log_conf_path = Path(__file__).parent / 'log.conf'  # Logging configuration is in this file
     logging.config.fileConfig(fname=log_conf_path, disable_existing_loggers=False)
     return logging.getLogger(__name__)  # Create a logger for this module
-
 
 # Configure the expected parameters and actions for the argparse module
 def parse(cl_input):

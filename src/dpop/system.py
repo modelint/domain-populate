@@ -71,17 +71,3 @@ class System:
 
         self.domain_dbs = {d['Alias']: DomainModelDB(name=d['Name'], alias=d['Alias'], system=self)
                            for d in domain_r.body}
-        pass
-        #
-        # # Populate each of these schemas with the corresponding *.sip file found in the context_dir
-        # cls.system.populate(context_dir=context_dir)
-        #
-        # # Activate the system (build the dynamic components within)
-        # cls.system.activate()
-        #
-        # # The system is now ready to react to external input
-        #
-        # # Run the scenario (sequence of interactions)
-        # Scenario.run(sys_domains=cls.system.domains)
-        # pass
-
