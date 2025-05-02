@@ -1,6 +1,6 @@
 # Blueprint Domain Populator
 
-This package takes two inputs, a populated metamodel database and a context.
+This package takes three inputs, a populated metamodel database, a context and a yaml file mapping user to system types.
 
 ### Populated metamodel database
 
@@ -12,6 +12,9 @@ This *.ral file is produced by the modeldb command if you have the xuml-populate
 
 A scenario instance population *.sip file that you write yourself which specifies instances and current states to be populated into your domain database. This file defines a context that can be used in a variety of simulation scenarios in a downstream package currently under development called model execute.
 
+### Type Mapping
+
+A yaml file that maps each domain type to a TclRAL system type.
 
 ## Command usage
 
