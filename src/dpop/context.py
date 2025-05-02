@@ -7,7 +7,7 @@ import logging
 from typing import TYPE_CHECKING, NamedTuple
 
 if TYPE_CHECKING:
-    from mx.domain_model_db import DomainModelDB
+    from dpop.domain_model_db import DomainModelDB
 
 # Model Integration
 from sip_parser.parser import SIParser
@@ -16,8 +16,8 @@ from pyral.relvar import Relvar
 from pyral.transaction import Transaction
 
 # Model Execution
-from mx.db_names import mmdb
-from mx.exceptions import *
+from dpop.db_names import mmdb
+from dpop.exceptions import *
 
 AttrRef = NamedTuple('AttrRef', from_attr=str, to_attr=str, to_class=str, alias=str)
 MultipleAssignerInitialState = NamedTuple('MultipleAssignerInitialState', pclass=str, state=str)
@@ -51,15 +51,7 @@ class Context:
         self.lifecycle_istates: dict[str, str] = {}
         self.ma_istates: dict[str, MultipleAssignerInitialState] = {}
 
-        db_dir = self.domaindb.system.system_dir / self.domaindb.system.context_dir
-        found_files = [file for file in db_dir.iterdir() if file.is_file() and
-                       any(file.name.lower().startswith(prefix) for prefix in self.domaindb.prefixes)]
-        if len(found_files) == 0:
-            raise MXFileException(f"No .sip file found for domain [{self.domaindb.domain}] in: {db_dir.resolve()}")
-        if len(found_files) > 1:
-            raise MXFileException(f"Multiple db_types files for domain [{self.domaindb.domain}] in: {db_dir.resolve()}")
-
-        sip_file = found_files[0]
+        sip_file = self.domaindb.system.context_path
 
         # Parse the starting_context's initial population file (*.sip file)
         _logger.info(f"Parsing sip: [{sip_file}]")

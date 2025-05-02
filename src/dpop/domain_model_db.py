@@ -19,6 +19,7 @@ from pyral.rtypes import Attribute, Mult
 
 # Domain Populate
 from dpop.db_names import mmdb
+from dpop.context import Context
 from dpop.exceptions import *
 
 _logger = logging.getLogger(__name__)
@@ -77,6 +78,7 @@ class DomainModelDB:
         self.non_assoc_rnums = None
         self.assoc_rnums = None
         self.user_types = None
+        self.context = None
         # self.context = None
         # self.lifecycles: dict[str, list[str]] = {}
         # self.pclasses: dict[str, list[str]] = {}
@@ -92,6 +94,7 @@ class DomainModelDB:
         self.build_simple_assocs()
         self.build_associative_rels()
         self.build_gen_rels()
+        self.populate()
         if self.system.verbose:
             self.display()
         if self.system.output_text:
@@ -113,9 +116,9 @@ class DomainModelDB:
             with redirect_stdout(f):
                 Relvar.printall(db=self.alias)
 
-    # def populate(self):
-    #     self.context = Context(domaindb=self)
-    #     self.print()
+    def populate(self):
+        self.context = Context(domaindb=self)
+        self.print()
 
     def build_gen_rels(self):
         """
