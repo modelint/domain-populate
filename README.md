@@ -29,21 +29,34 @@ Here -s is the system, -c is the context, and -t specifies the mapping of domain
 data types which currently are TclRAL types. If you use the optional -o option, a separate `<domain alias>.txt` file will be
 generated for each domain database. For the above command you should see these files generated:
 
-`elevator.ral` and `evman.txt`
+`EVMAN.ral` and `evman.txt`
+
+These are both, in fact, text files. But the *.ral file is readable by TclRAL and fairly incomprehensible to a human.
+The *.txt file, on the other hand, is easy to read and is only intended for human consumption. (That's why the name is lowercase).
 
 To get the above example copied into your current working directory use the -E (example) option.
 
 `% domaindb -E`
 
+At his point we are only working with (and have only tested) a system with a single domain. That said,
+a minor extension to the `sip` file format will make it possible to work with multiple domains. Will update this readme
+file when it's ready.
+
 ### System
 
-This is a metamodel TclRAL database (*.ral) file populated with a user's domain model: the Elevator Management domain populated into the Shlaer-Mellor metamodel, for example. It is probably named `elevator_mmdb.ral`
+This is a metamodel TclRAL database (*.ral) file populated with a user's domain model: the Elevator Management domain populated into the Shlaer-Mellor metamodel, for example.
 
-This *.ral file is produced by the modeldb command if you have the xuml-populate package installed.
+This is the `mmdb_elevator.ral` file in our example. The naming convention has the database left of the underscore
+and the content to the right. Thus, the metamodel database (mmdb) is populated with the elevator system.
+
+This `*.ral` file is produced by the `modeldb` command if you have the [xuml-populate](https://github.com/modelint/xuml-populate) package installed.
 
 ### Context
 
-A scenario instance population *.sip file that you write yourself which specifies instances and current states to be populated into your domain database. This file defines a context that can be used in a variety of simulation scenarios in a downstream package currently under development called model execute.
+Context is expressed as a set of initial instances and states in a scenario instance population `*.sip` file.
+The domaindb command doesn't do anything with the initial states -- those are handled in a downstream command yet to be published.
+
+Write the scenario instance population `*.sip` file yourself using the example `EVMAN_one_bank1.sip` file as a guide.
 
 ### Type Mapping
 
