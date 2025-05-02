@@ -18,7 +18,7 @@ A yaml file that maps each domain type to a TclRAL system type.
 
 ## Command usage
 
-`% domaindb -d elevator.ral -c EVMAN_one_bank1.sip -t EVMAN_types.yaml`
+`% domaindb -s elevator.ral -c EVMAN_one_bank1.sip -t EVMAN_types.yaml`
 
-Here -d is the domain, -c is the context, and -t specifies the mapping of domain types to available system
+Here -s is the system, -c is the context, and -t specifies the mapping of domain types to available system
 data types which currently are TclRAL types.
