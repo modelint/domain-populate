@@ -8,8 +8,8 @@ L { [Lower Floors]     [4.0] [2.0] [25] [7.0] [9.0] }
 Cabin
 Shaft | Travel direction | Current floor
 --
-{ [S1] [.up]   [L]  } > PICKUP DROPOFF
-{ [S2] [.down] [3] } > PICKUP DROPOFF
+{ [S1] [up]   [L]  } > PICKUP DROPOFF
+{ [S2] [down] [3] } > PICKUP DROPOFF
 --
 Door
 Shaft | Close attempts | Lock requested | Held | Blocked | Emergency hold

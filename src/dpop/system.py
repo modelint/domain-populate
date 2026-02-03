@@ -62,8 +62,9 @@ class System:
 
         self.name = system_r.body[0]['Name']
 
-        # Create a database schema for each domain
-        domain_r = Relation.restrict(db=mmdb, relation='Domain')
+        # Create a database schema for each modeled domain
+        Relation.restrict(db=mmdb, relation='Modeled Domain')
+        domain_r = Relation.semijoin(db=mmdb, rname2='Domain')
         if not domain_r.body:
             msg = f"No domains defined for system in metamodel"
             _logger.exception(msg)
