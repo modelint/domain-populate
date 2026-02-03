@@ -14,8 +14,9 @@ from pyral.relation import Relation
 from pyral.relvar import Relvar
 from pyral.transaction import Transaction
 
-# Model Execution
+# Domain Population
 from dpop.db_names import mmdb
+from dpop.exceptions import *
 
 AttrRef = NamedTuple('AttrRef', from_attr=str, to_attr=str, to_class=str, alias=str)
 MultipleAssignerInitialState = NamedTuple('MultipleAssignerInitialState', pclass=str, state=str)
@@ -86,7 +87,7 @@ class Context:
                         if not result.body:
                             msg = f"Initial instance ref expansion: No attribute references defined for{R}"
                             _logger.exception(msg)
-                            raise MXInitialInstanceReferenceException(msg)
+                            raise DPOPException(msg)
                         # We already know the rnum, from class (class_name) and to class, so we just need a projection
                         # on the local attribute and where the attribute in the target class
                         for attr_ref in result.body:
@@ -106,7 +107,7 @@ class Context:
                 else:
                     msg = f"Unrecognized column format in initial instance parse: [{col}]"
                     _logger.exception(msg)
-                    raise MXException(msg)
+                    raise DPOPException(msg)
 
             # Now that the relation header for our instance population is created, we need to fill in the relation
             # body (the actual instance values corresponding to each attribute in the expanded header)
@@ -205,7 +206,7 @@ class Context:
         if not result.body:
             msg = f"No Scalar found in populated metamodel for attribute [{self.domaindb.domain}:{attr_class}.{attr_name}]"
             _logger.exception(msg)
-            raise MXScalarException(msg)
+            raise DPOPException(msg)
         scalar = result.body[0]['Scalar']
         dbtype = self.domaindb.user_types[scalar]
         # Now cast using corresponding python type
