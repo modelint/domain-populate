@@ -35,8 +35,8 @@ class System:
             mmdb_path: Path to the populated metamodel *.ral TclRAL file.
             context_path: A *.sip file specifying an instance population for each domain.
             types_path: A *.yaml file specifying a mapping of domain to TclRAL data types.
-            verbose: Verbose mode has been set.
             output_text: If true, each populated domain db is displayed as tables on the console.
+            verbose: Verbose mode has been set.
             debug: Debug mode - prints schemas and other info to the console if true.
         """
         self.mmdb_path = mmdb_path

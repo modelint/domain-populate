@@ -20,8 +20,12 @@ class MetamodelDB:
 
     @classmethod
     def load(cls, mmdb_path: Path):
-        """ Let's load and print out the metamodel database """
+        """
+        Load and print out the metamodel database.
 
+        Args:
+            mmdb_path: Path to the metamodel *.ral TclRAL file to load.
+        """
         cls.filename = mmdb_path
 
         _logger.info(f"Loading the metamodel database from: [{mmdb_path}]")
@@ -31,7 +35,7 @@ class MetamodelDB:
     @classmethod
     def print(cls):
         """
-        Print out the populated metamodel
+        Print out the populated metamodel.
         """
         with open("mmdb.txt", 'w') as f:
             with redirect_stdout(f):

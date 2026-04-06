@@ -41,9 +41,9 @@ class Context:
         And, at this point, we are building the relation.create command
         When we get all the values, we commit and move on to the next instance
 
-        :param sip_file:  The path to the *.sip file providing the intial instance population
-        :param domain:  The subject matter domain being populated
-        :param dbtypes: The actual TclRAL db_types used to represent user model db_types
+        Args:
+            domaindb: The domain model database object providing access to domain metadata,
+                the context path (*.sip file), and user type mappings.
         """
         self.domaindb = domaindb
         self.lifecycle_istates: dict[str, str] = {}
@@ -194,10 +194,13 @@ class Context:
         Consults the user model Scalar -> TclRAL type mapping to determine which type to use in the user db.
         These are low level system db_types that TclRAL supports like 'string', 'int', 'boolean', etc.
 
-        :param attr_name: Name of the user model attribute
-        :param attr_class: Name of the attribute's class
-        :param value: The value to be cast
-        :return: The TclRAL type used to represent the Scalar
+        Args:
+            attr_name: Name of the user model attribute.
+            attr_class: Name of the attribute's class.
+            value: The value to be cast.
+
+        Returns:
+            The TclRAL type used to represent the Scalar.
         """
         # Look up the user type in the populated metamodel
 
@@ -219,10 +222,9 @@ class Context:
 
     def insert(self):
         """
-        Insert relations in the user database
+        Insert relations in the user database.
         """
         Transaction.open(db=self.domaindb.alias, name=pop_scenario)
         for relation, population in self.relations.items():
             Relvar.insert(db=self.domaindb.alias, tr=pop_scenario, relvar=relation.replace(' ', '_'), tuples=population)
         Transaction.execute(db=self.domaindb.alias, name=pop_scenario)
-

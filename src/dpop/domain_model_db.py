@@ -35,9 +35,16 @@ mult_tclral = {
 
 def load_yaml(file_path: Path) -> Any:
     """
-    Load the specified YAML file and return the loaded data
-    :param file_path:
-    :return: Loaded data (type depends on content of the file)
+    Load the specified YAML file and return the loaded data.
+
+    Args:
+        file_path: Path to the YAML file to load.
+
+    Returns:
+        Loaded data; type depends on the content of the file.
+
+    Raises:
+        DPOPFileException: If the file cannot be loaded for any reason.
     """
     try:
         with file_path.open("r") as file:
@@ -58,16 +65,17 @@ MultipleAssigner = NamedTuple("MultipleAssigner", rnum=str, pclass=str)
 
 class DomainModelDB:
     """
-    TclRAL schema for a user domain model extracted from a populated SM metamodel
+    TclRAL schema for a user domain model extracted from a populated SM metamodel.
     """
 
     def __init__(self, name: str, alias: str, system: 'System'):
         """
-        Create the db schema and optionally print it out
+        Create the db schema and optionally print it out.
 
-        :param name: Name of this domain
-        :param alias: Alias for this domain (used for the database name)
-        :param system: The system object
+        Args:
+            name: Name of this domain.
+            alias: Alias for this domain (used for the database name).
+            system: The system object.
         """
         self.system = system
         self.domain = name
@@ -95,7 +103,7 @@ class DomainModelDB:
 
     def display(self):
         """
-        Display the user domain schema on the console
+        Display the user domain schema on the console.
         """
         msg = f"Populated {self.domain} domain model"
         print(f"\n*** {msg} ***")
@@ -104,7 +112,7 @@ class DomainModelDB:
 
     def print(self):
         """
-        Print out the user domain schema
+        Print out the user domain schema.
         """
         with open(f"{self.alias.lower()}.txt", 'w') as f:
             with redirect_stdout(f):
@@ -124,11 +132,14 @@ class DomainModelDB:
 
     def build_gen_rels(self):
         """
-        Create referential constraints for each generalization relationship
-            name: 'R14'
-            superclass_name: 'Subsystem Element'
-            super_attrs: ['Label', 'Domain']
-            subs: {'Relationship': ['Rnum', 'Domain'], 'Class':['Cnum', 'Domain']}
+        Create referential constraints for each generalization relationship.
+
+            Example structure::
+
+                name: 'R14'
+                superclass_name: 'Subsystem Element'
+                super_attrs: ['Label', 'Domain']
+                subs: {'Relationship': ['Rnum', 'Domain'], 'Class':['Cnum', 'Domain']}
         """
         for g in self.gen_rnums:
             # Get the name of the superclass
@@ -163,7 +174,7 @@ class DomainModelDB:
 
     def build_associative_rels(self):
         """
-        Create referential constraints for each association formalized by an association class
+        Create referential constraints for each association formalized by an association class.
         """
         for a in self.assoc_rnums:
             # Get the name of the association class
@@ -201,8 +212,8 @@ class DomainModelDB:
 
     def build_simple_assocs(self):
         """
-        Create referential constraints for each non-associative association
-        i.e. Associations not formalized by an association class
+        Create referential constraints for each non-associative association,
+        i.e. associations not formalized by an association class.
         """
         for a in self.non_assoc_rnums:
             R = f"Rnum:<{a}>, Domain:<{self.domain}>"
@@ -226,7 +237,7 @@ class DomainModelDB:
 
     def sort_rels(self):
         """
-        Sort the domain's rnums into non-associative, associative, and generalization relationships
+        Sort the domain's rnums into non-associative, associative, and generalization relationships.
         """
         # Simple associations
         # Get rnums from Association class
@@ -246,7 +257,7 @@ class DomainModelDB:
 
     def build_class_relvars(self):
         """
-        Create class relvars
+        Create class relvars.
         """
         self.user_types = load_yaml(self.system.types_path)
 
