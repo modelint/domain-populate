@@ -212,7 +212,7 @@ class Context:
         # Now cast using corresponding python type
         # Boolean is a special case as it does not provide a string to bool casting function
         if dbtype == 'boolean':
-            python_value = True if value.strip().lower() == 'true' else False
+            python_value = 'TRUE' if value.strip().lower() == 'true' else 'FALSE'
         else:
             python_value = tcl_to_python[dbtype](value)
         return python_value

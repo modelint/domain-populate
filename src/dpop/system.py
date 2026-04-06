@@ -31,12 +31,13 @@ class System:
         Create a domain database for each domain in the populated metamodel and then populate each of these
         domains with instances specified context.
 
-        :param mmdb_path: Path to the populated metamodel *.ral TclRAL
-        :param context_path: A *.sip file specifying an instance population for each domain
-        :param type_mapping: A *.yaml file specifying a mapping of domain to TclRAL data types
-        param verbose: Verbose mode has been set
-        :param output_text: If true, each populated domain db is displayed as tables on the console
-        :param debug: Debug mode - prints schemas and other info to the console if true
+        Args:
+            mmdb_path: Path to the populated metamodel *.ral TclRAL file.
+            context_path: A *.sip file specifying an instance population for each domain.
+            types_path: A *.yaml file specifying a mapping of domain to TclRAL data types.
+            verbose: Verbose mode has been set.
+            output_text: If true, each populated domain db is displayed as tables on the console.
+            debug: Debug mode - prints schemas and other info to the console if true.
         """
         self.mmdb_path = mmdb_path
         self.context_path = context_path
