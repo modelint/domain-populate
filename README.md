@@ -14,7 +14,7 @@ you have defined in a supplied context.
 
 This creates an executable command named `domaindb`
 
-Type domaindb -help to get the complete and most up to date list of supported options.
+Type domaindb -h to get the complete and most up to date list of supported options.
 
 ## Usage
 
@@ -22,6 +22,13 @@ This package takes three inputs, a system populated into the metamodel database,
 instance populates, and a map from domain to system data types.
 
 ## Command usage
+
+First, get a copy of the bundled example with the -E (example) option:
+
+`% domaindb -E`
+
+This creates an `examples/ev1` directory in your current working directory containing the three input files
+(`mmdb_elevator.ral`, `EVMAN_one_bank1.sip`, and `EVMAN_types.yaml`). Change into that directory and run:
 
 `% domaindb -s mmdb_elevator.ral -c EVMAN_one_bank1.sip -t EVMAN_types.yaml -o`
 
@@ -34,11 +41,10 @@ generated for each domain database. For the above command you should see these f
 These are both, in fact, text files. But the *.ral file is readable by TclRAL and fairly incomprehensible to a human.
 The *.txt file, on the other hand, is easy to read and is only intended for human consumption. (That's why the name is lowercase).
 
-To get the above example copied into your current working directory use the -E (example) option.
+The `EVMAN.ral` domain database is always generated; the human-readable `evman.txt` is only produced when you
+pass the -o option.
 
-`% domaindb -E`
-
-At his point we are only working with (and have only tested) a system with a single domain. That said,
+At this point we are only working with (and have only tested) a system with a single domain. That said,
 a minor extension to the `sip` file format will make it possible to work with multiple domains. Will update this readme
 file when it's ready.
 
