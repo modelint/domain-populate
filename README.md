@@ -1,5 +1,14 @@
 # Blueprint Domain Populator
 
+<!-- Component icon. Placeholder art under docs/images/ — replace the two SVGs with the final drawing. -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="docs/images/domaindb-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/domaindb-light.svg">
+    <img alt="domaindb component: system, context and types in; domain databases out" src="docs/images/domaindb-light.svg" width="480">
+  </picture>
+</p>
+
 Create a separate [TclRAL](https://repos.modelrealization.com/cgi-bin/fossil/tclral/index) domain database for each
 Domain in your System.
 
