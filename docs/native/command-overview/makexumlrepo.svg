@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="-734 -576 734 576" width="734" height="576">
+  <defs/>
+  <g id="makexumlrepo" fill="none" stroke="none" stroke-opacity="1" stroke-dasharray="none" fill-opacity="1">
+    <title>makexumlrepo</title>
+    <g id="makexumlrepo_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_13">
+        <rect x="-249.79235" y="-397.35614" width="86.4" height="86.4" id="path"/>
+        <clipPath id="clip_path">
+          <use xl:href="#path"/>
+        </clipPath>
+        <g clip-path="url(#clip_path)">
+          <image xl:href="image3.png" width="86.4" height="86.4" transform="translate(-249.79235 -397.35614)"/>
+        </g>
+      </g>
+      <g id="Graphic_12">
+        <rect x="-478.4746" y="-321.71406" width="40.98191" height="40.98191" id="path_2"/>
+        <clipPath id="clip_path_2">
+          <use xl:href="#path_2"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_2)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-478.4746 -321.71406) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_11">
+        <text transform="translate(-555.89216 -426.47793)" fill="#0096ff">
+          <tspan font-family="Verdana" font-size="12" fill="#0096ff" x="0" y="12" xml:space="preserve">xUML Metamodel</tspan>
+        </text>
+      </g>
+      <g id="Graphic_10">
+        <rect x="-524.8997" y="-406.47793" width="40.98191" height="40.98191" id="path_3"/>
+        <clipPath id="clip_path_3">
+          <use xl:href="#path_3"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_3)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-524.8997 -406.47793) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_9">
+        <rect x="-541.05204" y="-362.1548" width="40.98191" height="40.98191" id="path_4"/>
+        <clipPath id="clip_path_4">
+          <use xl:href="#path_4"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_4)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-541.05204 -362.1548) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_8">
+        <rect x="-538.4483" y="-310.95614" width="40.98191" height="40.98191" id="path_5"/>
+        <clipPath id="clip_path_5">
+          <use xl:href="#path_5"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_5)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-538.4483 -310.95614) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_7">
+        <rect x="-483.9178" y="-375.21664" width="40.98191" height="40.98191" id="path_6"/>
+        <clipPath id="clip_path_6">
+          <use xl:href="#path_6"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_6)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-483.9178 -375.21664) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_6">
+        <rect x="-577.28906" y="-389.6976" width="40.98191" height="40.98191" id="path_7"/>
+        <clipPath id="clip_path_7">
+          <use xl:href="#path_7"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_7)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-577.28906 -389.6976) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_5">
+        <rect x="-513.1239" y="-341.51797" width="40.98191" height="40.98191" id="path_8"/>
+        <clipPath id="clip_path_8">
+          <use xl:href="#path_8"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_8)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-513.1239 -341.51797) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_4">
+        <rect x="-573.4862" y="-341.51797" width="40.98191" height="40.98191" id="path_9"/>
+        <clipPath id="clip_path_9">
+          <use xl:href="#path_9"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_9)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-573.4862 -341.51797) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_3">
+        <text transform="translate(-292.05427 -418.64844)" fill="#0096ff">
+          <tspan font-family="Verdana" font-size="12" fill="#0096ff" x="0" y="12" xml:space="preserve">xUML Metamodel Repository</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2">
+        <path d="M -411.9621 -325.86364 L -411.9621 -347.3911 C -411.9621 -348.49566 -411.06667 -349.3911 -409.9621 -349.3911 L -332.35203 -349.3911 C -331.24746 -349.3911 -330.35203 -350.28652 -330.35203 -351.3911 L -330.35203 -358.5988 C -330.35203 -359.70335 -329.4566 -360.5988 -328.35203 -360.5988 C -327.98567 -360.5988 -327.62634 -360.49815 -327.31326 -360.30786 L -291.16396 -338.33645 C -290.22006 -337.76275 -289.91995 -336.5325 -290.49365 -335.5886 C -290.66014 -335.31467 -290.89004 -335.08478 -291.16396 -334.9183 L -327.31326 -312.94687 C -328.25716 -312.37317 -329.4874 -312.67328 -330.0611 -313.61717 C -330.2514 -313.93025 -330.35203 -314.28958 -330.35203 -314.65595 L -330.35203 -321.86364 C -330.35203 -322.9682 -331.24746 -323.86364 -332.35203 -323.86364 L -409.9621 -323.86364 C -411.06667 -323.86364 -411.9621 -324.75907 -411.9621 -325.86364 Z" fill="#0432ff" fill-opacity=".248323"/>
+        <path d="M -411.9621 -325.86364 L -411.9621 -347.3911 C -411.9621 -348.49566 -411.06667 -349.3911 -409.9621 -349.3911 L -332.35203 -349.3911 C -331.24746 -349.3911 -330.35203 -350.28652 -330.35203 -351.3911 L -330.35203 -358.5988 C -330.35203 -359.70335 -329.4566 -360.5988 -328.35203 -360.5988 C -327.98567 -360.5988 -327.62634 -360.49815 -327.31326 -360.30786 L -291.16396 -338.33645 C -290.22006 -337.76275 -289.91995 -336.5325 -290.49365 -335.5886 C -290.66014 -335.31467 -290.89004 -335.08478 -291.16396 -334.9183 L -327.31326 -312.94687 C -328.25716 -312.37317 -329.4874 -312.67328 -330.0611 -313.61717 C -330.2514 -313.93025 -330.35203 -314.28958 -330.35203 -314.65595 L -330.35203 -321.86364 C -330.35203 -322.9682 -331.24746 -323.86364 -332.35203 -323.86364 L -409.9621 -323.86364 C -411.06667 -323.86364 -411.9621 -324.75907 -411.9621 -325.86364 Z" stroke="#0096ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-406.9621 -344.12737)" fill="#0096ff">
+          <tspan font-family="Verdana" font-size="12" fill="#0096ff" x="11.954445" y="12" xml:space="preserve">makexumlrepo</tspan>
+        </text>
+      </g>
+      <g id="Graphic_14">
+        <rect x="-227.0833" y="-310.95614" width="40.98191" height="40.98191" id="path_10"/>
+        <clipPath id="clip_path_10">
+          <use xl:href="#path_10"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_10)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-227.0833 -310.95614) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_15">
+        <text transform="translate(-165.05062 -358.3434)" fill="#0096ff">
+          <tspan font-family="Verdana" font-size="12" fill="#0096ff" x="0" y="12" xml:space="preserve">mmdb.ral</tspan>
+        </text>
+      </g>
+      <g id="Graphic_16">
+        <text transform="translate(-181.8055 -297.96518)" fill="#0096ff">
+          <tspan font-family="Verdana" font-size="12" fill="#0096ff" x="0" y="12" xml:space="preserve">mmclass_nt.py</tspan>
+        </text>
+      </g>
+      <g id="Graphic_17">
+        <text transform="translate(-542.8228 -256.0941)" fill="#0096ff">
+          <tspan font-family="Verdana" font-size="12" fill="#0096ff" x="0" y="12" xml:space="preserve">*.xcm files</tspan>
+        </text>
+      </g>
+      <g id="Graphic_18">
+        <text transform="translate(-609.8803 -236.99253)" fill="#0096ff">
+          <tspan font-family="Verdana" font-size="12" fill="#0096ff" x="0" y="12" xml:space="preserve">(one class model per subsystem)</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
