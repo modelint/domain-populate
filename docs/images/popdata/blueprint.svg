@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="-626.1709 -142.875 729.082 517.5" width="729.082" height="517.5">
+  <defs/>
+  <g id="blueprint" fill="none" stroke="none" stroke-opacity="1" stroke-dasharray="none" fill-opacity="1">
+    <title>blueprint</title>
+    <g id="blueprint_Blue_Frame">
+      <title>Blue Frame</title>
+      <g id="Graphic_24">
+        <path d="M -618.1709 -142.875 L 94.91113 -142.875 C 99.32941 -142.875 102.91113 -139.29328 102.91113 -134.875 L 102.91113 366.625 C 102.91113 371.0433 99.32941 374.625 94.91113 374.625 L -618.1709 374.625 C -622.5892 374.625 -626.1709 371.0433 -626.1709 366.625 L -626.1709 -134.875 C -626.1709 -139.29328 -622.5892 -142.875 -618.1709 -142.875 Z" fill="#004d80"/>
+      </g>
+    </g>
+    <g id="blueprint_Flow">
+      <title>Flow</title>
+      <g id="Graphic_144">
+        <rect x="-431.7256" y="-107.17366" width="86.4" height="86.4" id="path"/>
+        <clipPath id="clip_path">
+          <use xl:href="#path"/>
+        </clipPath>
+        <g clip-path="url(#clip_path)">
+          <image xl:href="image3.png" width="86.4" height="86.4" transform="translate(-431.7256 -107.17366)"/>
+        </g>
+      </g>
+      <g id="Graphic_141">
+        <rect x="-513.6401" y="101.98914" width="40.98191" height="40.98191" id="path_2"/>
+        <clipPath id="clip_path_2">
+          <use xl:href="#path_2"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_2)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-513.6401 101.98914) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_140">
+        <rect x="-103.42438" y="46.56345" width="86.4" height="86.4" id="path_3"/>
+        <clipPath id="clip_path_3">
+          <use xl:href="#path_3"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_3)">
+          <image xl:href="image3.png" width="86.4" height="86.4" transform="translate(-103.42438 46.56345)"/>
+        </g>
+      </g>
+      <g id="Graphic_145">
+        <text transform="translate(-449.29054 -118.30568)" fill="white">
+          <tspan font-family="Verdana" font-weight="bold" font-size="12" fill="white" x="0" y="12" xml:space="preserve">System Repository</tspan>
+        </text>
+      </g>
+      <g id="Graphic_146">
+        <path d="M -333.50566 120.00662 L -333.50566 78.00776 C -333.50566 76.90319 -332.61023 76.00776 -331.50566 76.00776 L -253.8956 76.00776 C -252.79103 76.00776 -251.8956 75.11233 -251.8956 74.00776 L -251.8956 58.16489 C -251.8956 57.06032 -251.00017 56.16489 -249.8956 56.16489 C -249.33362 56.16489 -248.79757 56.40133 -248.41865 56.816335 L -211.12692 97.65863 C -210.42953 98.42243 -210.42953 99.59195 -211.12692 100.35575 L -248.41865 141.19805 C -249.16343 142.01374 -250.42846 142.07123 -251.24416 141.32644 C -251.65916 140.94751 -251.8956 140.41147 -251.8956 139.84949 L -251.8956 124.00662 C -251.8956 122.90205 -252.79103 122.00662 -253.8956 122.00662 L -331.50566 122.00662 C -332.61023 122.00662 -333.50566 121.11119 -333.50566 120.00662 Z" fill="#0432ff" fill-opacity=".248323"/>
+        <path d="M -333.50566 120.00662 L -333.50566 78.00776 C -333.50566 76.90319 -332.61023 76.00776 -331.50566 76.00776 L -253.8956 76.00776 C -252.79103 76.00776 -251.8956 75.11233 -251.8956 74.00776 L -251.8956 58.16489 C -251.8956 57.06032 -251.00017 56.16489 -249.8956 56.16489 C -249.33362 56.16489 -248.79757 56.40133 -248.41865 56.816335 L -211.12692 97.65863 C -210.42953 98.42243 -210.42953 99.59195 -211.12692 100.35575 L -248.41865 141.19805 C -249.16343 142.01374 -250.42846 142.07123 -251.24416 141.32644 C -251.65916 140.94751 -251.8956 140.41147 -251.8956 139.84949 L -251.8956 124.00662 C -251.8956 122.90205 -252.79103 122.00662 -253.8956 122.00662 L -331.50566 122.00662 C -332.61023 122.00662 -333.50566 121.11119 -333.50566 120.00662 Z" stroke="#0096ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-328.50566 91.50719)" fill="#fffc00">
+          <tspan font-family="Verdana" font-size="12" fill="#fffc00" x="32.377296" y="12" xml:space="preserve">popdata</tspan>
+        </text>
+      </g>
+      <g id="Graphic_147">
+        <text transform="translate(-128.861 28.89869)" fill="white">
+          <tspan font-family="Verdana" font-weight="bold" font-size="12" fill="white" x="0" y="12" xml:space="preserve">Initialized System</tspan>
+        </text>
+      </g>
+      <g id="Graphic_149">
+        <text transform="translate(-566.4066 152.8367)" fill="#e58de3">
+          <tspan font-family="Verdana" font-size="13" fill="#e58de3" x="0" y="13" xml:space="preserve">EVMAN_one_shaft.sip</tspan>
+        </text>
+      </g>
+      <g id="Graphic_150">
+        <text transform="translate(-569.1626 60.35318)" fill="white">
+          <tspan font-family="Verdana" font-weight="bold" font-size="12" fill="white" x="12.02063" y="12" xml:space="preserve">Scenario Instance </tspan>
+          <tspan font-family="Verdana" font-weight="bold" font-size="12" fill="white" x="36.700317" y="27" xml:space="preserve">Population</tspan>
+        </text>
+      </g>
+      <g id="Graphic_152">
+        <rect x="-137.5988" y="128.27121" width="148.82324" height="26" fill="#004d80"/>
+        <text transform="translate(-132.5988 133.27121)" fill="white">
+          <tspan font-family="Verdana" font-style="italic" font-size="13" fill="white" x="0" y="13" xml:space="preserve">(ready for execution)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_153">
+        <rect x="-386.574" y="259.87387" width="40.98191" height="40.98191" id="path_4"/>
+        <clipPath id="clip_path_4">
+          <use xl:href="#path_4"/>
+        </clipPath>
+        <g clip-path="url(#clip_path_4)">
+          <image xl:href="image4.png" width="86.4" height="86.4" transform="translate(-386.574 259.87387) scale(.4743277)"/>
+        </g>
+      </g>
+      <g id="Graphic_154">
+        <text transform="translate(-433.10055 307.50612)" fill="#a2b51b">
+          <tspan font-family="Verdana" font-size="13" fill="#a2b51b" x="0" y="13" xml:space="preserve">EVMAN_types.yaml</tspan>
+        </text>
+      </g>
+      <g id="Graphic_155">
+        <text transform="translate(-444.50735 231.51344)" fill="white">
+          <tspan font-family="Verdana" font-weight="bold" font-size="12" fill="white" x="0" y="12" xml:space="preserve">Model -&gt; Platform types</tspan>
+        </text>
+      </g>
+      <g id="Graphic_156">
+        <text transform="translate(-449.24845 -25.641864)" fill="#ffd579">
+          <tspan font-family="Verdana" font-size="13" fill="#ffd579" x="0" y="13" xml:space="preserve">mmdb_elevator.ral</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
