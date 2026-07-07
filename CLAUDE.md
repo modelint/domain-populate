@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this does
 
-`domain-populate` (package `mi-domain-populate`, command `domaindb`) takes a **populated Shlaer-Mellor
+`domain-populate` (package `mi-domain-populate`, command `popdata`) takes a **populated Shlaer-Mellor
 metamodel** (an mmdb `*.ral` TclRAL database describing one or more modeled domains) and, for **each**
 domain in it, generates a standalone TclRAL database (`<Alias>.ral`) whose schema and referential
 constraints are derived from the metamodel and whose instances come from a context file. It is one stage
@@ -25,12 +25,12 @@ The three inputs (see README for the full example):
 pip install -e ".[dev]"
 
 # Run against the bundled example (from within a scratch dir)
-domaindb -E                              # copy src/examples/ -> ./examples in cwd
-domaindb -s mmdb_elevator.ral -c EVMAN_one_bank1.sip -t EVMAN_types.yaml -o
+popdata -E                               # copy src/examples/ -> ./examples in cwd
+popdata -s mmdb_elevator.ral -c EVMAN_one_bank1.sip -t EVMAN_types.yaml -o
 #   -o  also writes a human-readable <alias>.txt dump per domain
 #   -v  verbose: print metamodel + each domain db as tables to console
 #   -D  debug: dump metamodel schema to mmdb.txt
-#   -L  keep the domaindb.log file (deleted on exit otherwise)
+#   -L  keep the popdata.log file (deleted on exit otherwise)
 
 # Tests (pytest configured with pythonpath=src; note: no test files exist yet)
 pytest
@@ -43,7 +43,7 @@ bump2version patch      # or minor / major
 python -m build
 ```
 
-The `working/` directory holds real input/output files used for manual runs — run `domaindb` from there.
+The `working/` directory holds real input/output files used for manual runs — run `popdata` from there.
 
 ## Architecture
 

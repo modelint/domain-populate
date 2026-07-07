@@ -1,12 +1,11 @@
 # Blueprint Domain Populator
 
-<!-- Component icon. Placeholder art under docs/images/ — replace the two SVGs with the final drawing. -->
+<!-- Self-contained banner (own background) — one <img> + absolute raw URL renders on GitHub light/dark and PyPI.
+     The PNG must exist at this URL on `main`; while on a feature branch the image looks broken until merged. -->
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="docs/images/domaindb-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="docs/images/domaindb-light.svg">
-    <img alt="domaindb component: system, context and types in; domain databases out" src="docs/images/domaindb-light.svg" width="480">
-  </picture>
+  <img src="https://raw.githubusercontent.com/modelint/domain-populate/main/docs/images/popdata.png"
+       alt="popdata reads a populated system repository, a scenario instance population, and a model-to-platform type map, and produces an initialized system database ready for execution"
+       width="720">
 </p>
 
 Create a separate [TclRAL](https://repos.modelrealization.com/cgi-bin/fossil/tclral/index) domain database for each
@@ -21,9 +20,9 @@ you have defined in a supplied context.
 
 % pip install mi-domain-populate
 
-This creates an executable command named `domaindb`
+This creates an executable command named `popdata`
 
-Type domaindb -h to get the complete and most up to date list of supported options.
+Type popdata -h to get the complete and most up to date list of supported options.
 
 ## Usage
 
@@ -34,12 +33,12 @@ instance populates, and a map from domain to system data types.
 
 First, get a copy of the bundled example with the -E (example) option:
 
-`% domaindb -E`
+`% popdata -E`
 
 This creates an `examples/ev1` directory in your current working directory containing the three input files
 (`mmdb_elevator.ral`, `EVMAN_one_bank1.sip`, and `EVMAN_types.yaml`). Change into that directory and run:
 
-`% domaindb -s mmdb_elevator.ral -c EVMAN_one_bank1.sip -t EVMAN_types.yaml -o`
+`% popdata -s mmdb_elevator.ral -c EVMAN_one_bank1.sip -t EVMAN_types.yaml -o`
 
 Here -s is the system, -c is the context, and -t specifies the mapping of domain types to available system
 data types which currently are TclRAL types. If you use the optional -o option, a separate `<domain alias>.txt` file will be
@@ -69,7 +68,7 @@ This `*.ral` file is produced by the `modeldb` command if you have the [xuml-pop
 ### Context
 
 Context is expressed as a set of initial instances and states in a scenario instance population `*.sip` file.
-The domaindb command doesn't do anything with the initial states -- those are handled in a downstream command yet to be published.
+The popdata command doesn't do anything with the initial states -- those are handled in a downstream command yet to be published.
 
 Write the scenario instance population `*.sip` file yourself using the example `EVMAN_one_bank1.sip` file as a guide.
 

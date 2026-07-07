@@ -23,7 +23,7 @@ build = ["build", "twine"]
 dev = ["bump2version", "pytest"]
 
 [project.scripts]
-domaindb = "dpop.__main__:main"
+popdata = "dpop.__main__:main"
 
 [project.urls]
 repository    = "https://github.com/modelint/domain-populate"

@@ -14,7 +14,7 @@ import atexit
 from dpop.system import System
 from dpop import version
 
-_logpath = Path("domaindb.log")
+_logpath = Path("popdata.log")
 _progname = 'Blueprint Domain Population'
 
 def clean_up():
